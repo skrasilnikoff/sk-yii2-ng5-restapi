@@ -1,0 +1,28 @@
+<div >
+
+  <mat-card *ngIf="!errorState">
+
+    <mat-card-title>
+      <mat-form-field>
+        <input matInput type="text" matInput [(ngModel)]="note.name" placeholder="Note name">
+      </mat-form-field>
+    </mat-card-title>
+
+    <mat-card-content>
+
+      <mat-form-field>
+        <textarea matInput [(ngModel)]="note.text" rows="10" placeholder="Note body"></textarea>
+      </mat-form-field>
+    </mat-card-content>
+
+    <mat-card-actions>
+      <button mat-button color="primary" (click)="saveNoteHandler()">Save</button>
+      <button *ngIf="note.id != 0" mat-button color="warn" (click)="deleteNoteHandler()">Delete</button>
+    </mat-card-actions>
+
+  </mat-card>
+
+
+  <h2 *ngIf="errorState">The note doesn't exist</h2>
+
+</div>

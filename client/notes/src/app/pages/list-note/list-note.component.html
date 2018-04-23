@@ -1,0 +1,22 @@
+<div layout="column" layout-align="start center" *ngFor="let note of notes" layout-wrap>
+
+  <mat-card>
+
+    <mat-card-title>
+      {{note.name}}
+    </mat-card-title>
+
+    <mat-card-content>
+      {{note.text}}
+    </mat-card-content>
+
+    <mat-card-actions>
+      <a routerLink="edit-note/{{note.id}}" mat-button>Edit</a>
+    </mat-card-actions>
+
+  </mat-card>
+</div>
+
+<a class="add-new-note" mat-fab routerLink="edit-note/0">
+  <mat-icon>add item</mat-icon>
+</a>

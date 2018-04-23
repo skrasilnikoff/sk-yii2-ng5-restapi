@@ -1,0 +1,16 @@
+.mat-card {
+  max-width: 500px;
+  margin: 0 auto;
+}
+.mat-card > * {
+  display: flex;
+  flex-direction: column;
+}
+
+.mat-card > .mat-card-actions {
+  display: block;
+}
+
+h2 {
+  text-align: center;
+}
